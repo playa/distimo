@@ -4,8 +4,7 @@ module Distimo
 
     METHODS.each do |name|
       define_method name do |query = {}|
-        options = prepare(query)
-        self.class.get("/#{name}", options)
+        get("/#{name}", query)
       end
     end
 

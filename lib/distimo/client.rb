@@ -1,4 +1,5 @@
 require "distimo/api"
+require  "distimo/error"
 require "httparty"
 module Distimo
   class Client
@@ -10,6 +11,13 @@ module Distimo
 
     def initialize opts
       opts.each {|k,v| send("#{k}=",v)}
+    end
+
+    def get path, query
+      options = prepare(query)
+      response = self.class.get path, options
+      raise Error.from_response(response.body) if response.code >= 400
+      response
     end
 
     private

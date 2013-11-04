@@ -1,6 +1,6 @@
 # Distimo
 
-TODO: Write a gem description
+Simple api wrapper
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+client = Distimo::Client.new(
+  public_key: "your public key",
+  private_key: "your private key",
+  token: "oauth token",
+  username: "your user name",
+  password: "your password")
+
+puts client.downloads(assets: "1,2,3")
+```
 
 ## Contributing
 

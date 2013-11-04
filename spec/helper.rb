@@ -15,3 +15,8 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 end
+
+
+def stub_get(path)
+  stub_request(:get, Distimo::Client.base_uri + path)
+end
