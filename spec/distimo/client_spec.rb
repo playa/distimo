@@ -86,7 +86,7 @@ describe Distimo::Client do
     context "with error" do
       before do
         stub_get("/any").with(query: hash_including({apikey: "PublicKey"})).
-          to_return(:body => {code: 400, message: "Error"}, :status => 400)
+          to_return(:status => 400)
       end
 
       it { expect{ client.get("/any",{})}.to raise_error(Distimo::Error)}

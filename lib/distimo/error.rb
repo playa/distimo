@@ -9,8 +9,8 @@ module Distimo
        super("Code: #{code}. #{note} See: #{link}")
     end
 
-    def self.from_response body={}
-      new(body["code"],body["message"],body["link"])
+    def self.from_response response
+      new(response["code"],response["message"],response["link"])
     end
   end
 end

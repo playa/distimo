@@ -16,7 +16,7 @@ module Distimo
     def get path, query
       options = prepare(query)
       response = self.class.get path, options
-      raise Error.from_response(response.body) if response.code >= 400
+      raise Error.from_response(response) if response.code >= 400
       response
     end
 
