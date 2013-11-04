@@ -17,7 +17,7 @@ module Distimo
     def prepare query
       time = Time.now.utc.to_i
       hash  = prepare_hash query,time
-      _query = query.merge(api_key: private_key, hash: hash, t: time)
+      _query = query.merge(apikey: public_key, hash: hash, t: time)
       _auth = prepare_auth
       {query: _query}.merge(_auth)
     end

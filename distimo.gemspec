@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.version       = Distimo::VERSION
   spec.authors       = ["Yuri Barbashov"]
   spec.email         = ["lolcoltd@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Distimo API wrapper gem}
+  spec.summary       = %q{Distimo API wrapper gem}
+  spec.homepage      = "https://github.com/playa/distimo"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
